@@ -16,8 +16,8 @@ const AppProvider = ({ children }) => {
     try {
       const response = await fetch(`${URL}$ {serachTerm} `);
       const data = await response.json();
-      console.log(data);
       const { docs } = data;
+      console.log(docs);
     } catch (error) {
       console.log(error);
       setLoading(false);
